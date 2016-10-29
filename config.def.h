@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char font[] = "Liberation Mono:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -84,32 +84,45 @@ static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	/* base16-tomorrow-night */
+	"#1d1f21",  /*  0: black    */
+	"#cc6666",  /*  1: red      */
+	"#b5bd68",  /*  2: green    */
+	"#f0c674",  /*  3: yellow   */
+	"#81a2be",  /*  4: blue     */
+	"#b294bb",  /*  5: magenta  */
+	"#8abeb7",  /*  6: cyan     */
+	"#c5c8c6",  /*  7: white    */
+	"#969896",  /*  8: brblack  */
+	"#cc6666",  /*  9: brred    */
+	"#b5bd68",  /* 10: brgreen  */
+	"#f0c674",  /* 11: bryellow */
+	"#81a2be",  /* 12: brblue   */
+	"#b294bb",  /* 13: brmagenta*/
+	"#8abeb7",  /* 14: brcyan   */
+	"#ffffff",  /* 15: brwhite  */
 };
+//static const char *colorname[] = {
+//	/* base16-default-dark */
+//	"#181818",  /*  0: black    */
+//	"#ab4642",  /*  1: red      */
+//	"#a1b56c",  /*  2: green    */
+//	"#f7ca88",  /*  3: yellow   */
+//	"#7cafc2",  /*  4: blue     */
+//	"#ba8baf",  /*  5: magenta  */
+//	"#86c1b9",  /*  6: cyan     */
+//	"#d8d8d8",  /*  7: white    */
+//	"#585858",  /*  8: brblack  */
+//	"#ab4642",  /*  9: brred    */
+//	"#a1b56c",  /* 10: brgreen  */
+//	"#f7ca88",  /* 11: bryellow */
+//	"#7cafc2",  /* 12: brblue   */
+//	"#ba8baf",  /* 13: brmagenta*/
+//	"#86c1b9",  /* 14: brcyan   */
+//	"#f8f8f8",  /* 15: brwhite  */
+//};
+
+
 
 
 /*
@@ -118,8 +131,8 @@ static const char *colorname[] = {
  */
 static unsigned int defaultfg = 7;
 static unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 15;
 
 /*
  * Default shape of cursor
